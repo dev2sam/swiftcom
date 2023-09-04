@@ -1,0 +1,385 @@
+.contacts_screen {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.contacts_screen .swiftcom {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+    overflow: hidden;
+    position: relative;
+}
+
+.contacts_screen .main {
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacts_screen .main_tab {
+    height: 100%;
+    width: 50%;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+
+/* swiftcom */
+
+.contacts_screen .swiftcom .innercom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts_screen .swiftcom .innercom .logo svg {
+    border-radius: 50%;
+    width: 13vw;
+}
+
+.contacts_screen .swiftcom .innercom h1 {
+    font-family: var(--heading);
+    text-align: center;
+    margin-top: 0.2em;
+    color: var(--text1);
+    font-size: 3vw;
+}
+
+
+/* --------------top------------- */
+
+.contacts_screen .top {
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2em;
+    background: var(--accent);
+}
+
+.contacts_screen .left {
+    color: var(--text1);
+    font-family: var(--heading);
+    letter-spacing: 0.1em;
+    font-size: 5vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    font-weight: 900;
+}
+
+.contacts_screen .top .left .fa-ellipsis-v {
+    margin-left: 0.7em;
+    color: var(--text1);
+    font-size: 6vw;
+}
+
+.contacts_screen .top .right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+}
+
+.contacts_screen .top .right .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contacts_screen .top .right .search .fa-search {
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    padding: 0.5em;
+    color: var(--accent);
+    font-size: 4.7vw;
+}
+
+.contacts_screen .top .right .search input {
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    padding: 0.7em 1em 0.7em 3em;
+    font-size: 3.6vw;
+    font-family: var(--heading);
+    font-weight: 700;
+    width: 100%;
+    background: var(--bg);
+    color: var(--text2);
+}
+
+.contacts_screen .top .right .search input::placeholder {
+    font-size: 14px;
+    font-family: var(--heading);
+    letter-spacing: 0.1em;
+    font-weight: 100;
+    color: var(--text3);
+}
+
+.top_menu {
+    position: absolute;
+    padding: 1em;
+    right: 0px;
+    top: 20%;
+    background: var(--accent);
+    font-family: var(--heading);
+    font-size: 4.5vw;
+    border-bottom-left-radius: 0.5em;
+    display: none;
+    z-index: 9;
+}
+
+.top_menu ul li {
+    padding: 0.5em 0em;
+    border-top: 2px solid var(--accent);
+    cursor: pointer;
+}
+
+.top_menu ul li:nth-child(1) {
+    border-top: none;
+}
+
+
+/* -------------------middle------------------ */
+
+.contacts_screen .mid {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 80%;
+    background: var(--bg);
+    padding: 0.5em;
+    position: relative;
+}
+
+.add_contact {
+    font-family: var(--heading);
+    font-size: 6vw;
+    color: var(--accent);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts_screen .mid::-webkit-scrollbar {
+    width: 0px;
+}
+
+.contacts_screen .mid .contact {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 0.3em;
+    padding: 0.5em 1em;
+    border-radius: 0.8em;
+    background: var(--bg2);
+    position: relative;
+    cursor: pointer;
+}
+
+.contacts_screen .mid .contact .left {
+    height: 100%;
+    width: 23%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contacts_screen .mid .contact .left img {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    padding: 0.1em;
+}
+
+.contacts_screen .mid .contact .left img.online {
+    border: 2px solid var(--success);
+}
+
+.contacts_screen .mid .contact .right {
+    height: 100%;
+    width: 77%;
+    overflow: hidden;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts_screen .mid .contact .right .info {
+    height: 100%;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts_screen .mid .contact .right .info .inner-info {
+    width: 100%;
+    overflow: hidden;
+    padding-right: 1em;
+}
+
+.contacts_screen .mid .contact .right h1 {
+    font-family: var(--text);
+    font-size: 5.8vw;
+    color: var(--text2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contacts_screen .mid .contact .right h2 {
+    font-family: var(--heading);
+    font-size: 2.6vw;
+    color: var(--text3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contacts_screen .mid .contact .right .info span {
+    float: right;
+    margin-top: 0.5em;
+    background: var(--success);
+    border-radius: 50%;
+    padding: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.3vw;
+    width: 1.3vw;
+    overflow: hidden;
+}
+
+.contacts_screen .mid .contact .right .info span h3 {
+    font-family: var(--text);
+    font-size: 12px;
+    display: inline;
+    color: var(--text1);
+}
+
+
+/* -------------------bottom------------------ */
+
+.contacts_screen .bottom {
+    width: 100%;
+    height: 10%;
+    padding: 0em 3em;
+    background: var(--bg);
+    font-family: var(--text);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    border-top: 2px solid var(--shadow2);
+}
+
+.contacts_screen .bottom div {
+    padding: 0.5em;
+    position: relative;
+}
+
+.contacts_screen .bottom div.onthis::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 4px;
+    border-radius: 100em;
+    width: 90%;
+    background: var(--accent);
+}
+
+.contacts_screen .bottom img {
+    width: 8vw;
+    filter: var(--icons);
+    cursor: pointer;
+}
+
+
+/* --------------media queries--------------- */
+
+@media(max-width:1025px) {
+    .contacts_screen .swiftcom {
+        width: 40%;
+    }
+    .contacts_screen .main_tab {
+        width: 60%;
+    }
+}
+
+@media(min-width:550px) {
+    /* top */
+    .contacts_screen .left {
+        font-size: 25px;
+    }
+    .contacts_screen .top .left .fa-ellipsis-v {
+        font-size: 25px;
+    }
+    .contacts_screen .top .right .search .fa-search {
+        font-size: 25px;
+    }
+    .contacts_screen .top .right .search input {
+        font-size: 20px;
+    }
+    /* middle */
+    .contacts_screen .mid .contact .left img {
+        height: 60px;
+        width: 60px;
+    }
+    .contacts_screen .mid .contact .right h1 {
+        font-size: 25px;
+    }
+    .contacts_screen .mid .contact .right h2 {
+        font-size: 10px;
+    }
+    /* bottom */
+    .contacts_screen .bottom img {
+        width: 30px;
+    }
+}
+
+@media(max-width:550px) {
+    .contacts_screen .swiftcom {
+        display: none;
+    }
+    .contacts_screen .main_tab {
+        width: 100%;
+    }
+}

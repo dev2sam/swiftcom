@@ -1,0 +1,360 @@
+.login_screen {
+    height: 100vh;
+    min-height: 700px;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+
+/* -----left------ */
+
+.login_screen .left {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgba(127, 127, 213, 0.7), rgb(134, 168, 231, 0.8), rgb(145, 234, 228, 0.9));
+    position: relative;
+}
+
+.login_screen .left .inner_left {
+    height: 100%;
+    width: 35vw;
+}
+
+.login_screen .left .main-svg {
+    transform: rotate(180deg);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    fill: var(--bg);
+}
+
+.login_screen .left .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1em;
+}
+
+.login_screen .left .top i {
+    color: var(--bg);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login_screen .left .top .icon {
+    display: none;
+}
+
+.login_screen .left .heading {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+}
+
+.login_screen .left .heading h1 {
+    font-family: var(--bold);
+    font-size: 70px;
+    color: var(--bg);
+}
+
+.login_screen .left .image {
+    position: absolute;
+    z-index: 2;
+    height: 400px;
+    width: 45%;
+    overflow: hidden;
+    bottom: 20%;
+    left: 20%;
+    transform: translate(-20%, 20%);
+}
+
+.login_screen .left .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ----right section----- */
+
+.login_screen .right .top {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.login_screen .right .top .icon {
+    display: flex;
+    align-items: center;
+}
+
+.login_screen .right .top .icon svg {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 2;
+    margin-right: 0.5em;
+}
+
+.login_screen .right .top .icon h1 {
+    font-family: var(--narrow);
+    color: var(--text2);
+    font-size: 28px;
+    letter-spacing: 0.05em;
+}
+
+.login_screen .right {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.login_screen .right .form {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%, -50%);
+}
+
+.login_screen .right .form h3 {
+    color: var(--text2);
+    font-family: var(--text);
+    font-size: 40px;
+    margin-bottom: 2em;
+}
+
+.login_screen .right .form h3:after {
+    content: '';
+    display: block;
+    margin-top: 0.2em;
+    width: 10%;
+    height: 4px;
+    border-radius: 100px;
+    background: var(--accent);
+}
+
+.login_screen .right .form .input {
+    border-bottom: 2px solid var(--text2);
+    outline: none;
+    padding: 0.6em;
+    overflow: hidden;
+}
+
+.login_screen .right .form .input:nth-child(1) {
+    margin-bottom: 2em;
+}
+
+.login_screen .right .form .input i {
+    font-size: 16px;
+    color: var(--text2);
+}
+
+.fas.fa-exclamation {
+    display: none;
+    font-size: 13px;
+}
+
+.far.fa-eye {
+    font-size: 13px;
+    display: none;
+    cursor: pointer;
+}
+
+.far.fa-eye-slash {
+    font-size: 13px;
+    display: none;
+    cursor: pointer;
+}
+
+.login_screen .right .form .input input {
+    outline: none;
+    width: 85%;
+    border: none;
+    padding: 0px 1em;
+    font-family: var(--text);
+    font-size: 16px;
+    background: var(--bg);
+    color: var(--text2);
+}
+
+.login_screen .right .form .input input::placeholder {
+    font-family: var(--heading);
+    margin-bottom: 0.3em;
+    font-size: 14px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+}
+
+.login_screen .right .form h2 {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--text);
+    float: right;
+    margin-top: 0.6em;
+    color: var(--danger);
+}
+
+.login_screen .right .form h2 {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--text);
+    float: right;
+    margin-top: 0.6em;
+    color: var(--danger);
+    cursor: pointer;
+}
+
+.login_screen .right .form .login-btn {
+    font-family: var(--heading);
+    font-size: 18px;
+    padding: 0.5em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 3em;
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    background: var(--accent);
+    color: var(--bg);
+    cursor: pointer;
+}
+
+.login_screen .right .form .login-btn:hover {
+    transition: 0.3s;
+    background: var(--danger);
+}
+
+.login_screen .right .form p {
+    color: var(--text3);
+    font-weight: 900;
+    font-family: var(--heading);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.login_screen .right .form p span {
+    padding: 0px 0.4em;
+    background: var(--bg);
+}
+
+.login_screen .right .form p:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 2px;
+    width: 88%;
+    background: var(--text3);
+}
+
+.login_screen .right .form .sign-btn-promt {
+    font-family: var(--heading);
+    font-size: 18px;
+    font-weight: 900;
+    padding: 0.5em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border: 2px solid var(--text3);
+    outline: none;
+    border-radius: 0.5em;
+    background: var(--bg);
+    color: grey;
+    cursor: pointer;
+}
+
+.login_screen .right .form .sign-btn-promt:hover {
+    transition: 0.3s;
+    font-weight: 400;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+
+/* ----media queries---- */
+
+@media(max-width: 1500px) {
+    .login_screen .left .heading h1 {
+        font-size: 4.5vw;
+    }
+}
+
+@media(max-width: 1100px) {
+    .login_screen .left .heading {
+        top: 20%;
+        left: 30%;
+        transform: translate(-30%, -20%);
+    }
+    .login_screen .left .heading h1 {
+        font-size: 60px;
+    }
+    .login_screen .left .image {
+        left: 10%;
+        transform: translate(-10%, 20%);
+    }
+    .login_screen .right .form {
+        left: 20%;
+        transform: translate(-20%, -50%);
+        width: 80%;
+    }
+}
+
+@media(max-width:900px) {
+    .login_screen .left {
+        width: 60%;
+    }
+    .login_screen .right {
+        width: 40%;
+    }
+}
+
+@media(max-width:700px) {
+    .login_screen .left {
+        display: none;
+    }
+    .login_screen {
+        flex-direction: column;
+    }
+    .login_screen .right {
+        width: 100%;
+        height: 100%;
+    }
+    .login_screen .right .form {
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .login_screen .right .form h3:after {
+        width: 8%;
+    }
+    .login_screen .right .form .input i {
+        font-size: 14px;
+    }
+}

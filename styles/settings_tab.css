@@ -1,0 +1,588 @@
+.settings_tab {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.settings_tab .top {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.settings_tab .top i {
+    color: var(--text2);
+    font-size: 7vw;
+    margin-right: 1em;
+}
+
+.settings_tab .top h1 {
+    color: var(--text2);
+    font-size: 7vw;
+    margin-right: 1em;
+    font-family: var(--heading);
+}
+
+.settings_tab .main_tab {
+    height: 100%;
+    width: 50%;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.settings_tab .main {
+    width: 100%;
+    height: 90%;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+
+/* swiftcom */
+
+.settings_tab .swiftcom {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+    overflow: hidden;
+    position: relative;
+}
+
+.settings_tab .swiftcom .innercom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings_tab .swiftcom .innercom .logo svg {
+    border-radius: 50%;
+    width: 13vw;
+}
+
+.settings_tab .swiftcom .innercom h1 {
+    font-family: var(--heading);
+    text-align: center;
+    margin-top: 0.2em;
+    color: var(--bg);
+    font-size: 3vw;
+}
+
+
+/* -------------------------------profile-settings------------------------------- */
+
+.profile_pic {
+    display: none;
+}
+
+.settings_tab .mid.profile {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.settings_tab .mid.profile .change {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings_tab .mid.profile .change img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+    margin-bottom: 5vw;
+}
+
+.settings_tab .mid.profile .change button {
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    color: var(--bg);
+    background: var(--success);
+    font-family: var(--text);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.settings_tab .mid.profile .change button:hover {
+    transition: 0.3s;
+    background: var(--danger);
+}
+
+.settings_tab .mid.profile .delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings_tab .mid.profile .delete .del_profile {
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    color: var(--danger);
+    font-weight: 900;
+    background: var(--bg);
+    border: 2px solid var(--danger);
+    font-family: var(--text);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.settings_tab .mid.profile .delete .del_profile:hover {
+    transition: 0.3s;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+.settings_tab .mid.profile .change_password {
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    color: var(--text1);
+    font-weight: 900;
+    background: var(--accent);
+    font-family: var(--text);
+    font-size: 5.5vw;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 1em;
+}
+
+.settings_tab .mid.profile .change_password:hover {
+    transition: 0.3s;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------theme-settings------------------------------- */
+
+.settings_tab .mid.themes {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+
+.settings_tab .mid.themes .wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 1em;
+}
+
+.settings_tab .mid.themes .wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+.settings_tab .mid.themes .wrapper .theme {
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+.settings_tab .mid.themes .wrapper .theme input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.settings_tab .mid.themes .wrapper .theme img {
+    height: auto;
+    width: 100%;
+    border-radius: 0.5em;
+    transition: 0.3s;
+}
+
+.settings_tab .mid.themes .wrapper .theme img:hover {
+    transform: scale(0.9);
+}
+
+.settings_tab .mid.themes .wrapper .theme img.selected {
+    border: 3px solid var(--success);
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------change-password------------------------------- */
+
+.settings_tab .mid.change_pass {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings_tab .mid .change_pass_form {
+    padding: 1em;
+    background: var(--bg2);
+    border-radius: 0.5em;
+}
+
+.settings_tab .mid .change_pass_form p {
+    font-family: var(--heading);
+    font-size: 4.5vw;
+    font-weight: 600;
+    color: var(--text2);
+    margin-bottom: 0.1em;
+}
+
+.settings_tab .mid .change_pass_form input {
+    font-family: var(--text);
+    font-size: 4vw;
+    background: var(--bg);
+    border: none;
+    outline: none;
+    color: var(--text2);
+    border-radius: 0.3em;
+    padding: 0.5em 0.7em;
+    margin-bottom: 1em;
+    width: 90%;
+}
+
+.settings_tab .mid .change_pass_form input:nth-child(2) {
+    margin-bottom: 2em;
+}
+
+.settings_tab .mid .change_pass_form button {
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    color: var(--text1);
+    font-weight: 900;
+    background: var(--accent);
+    font-family: var(--text);
+    font-size: 3.5vw;
+    display: block;
+    float: right;
+    margin-top: 6em;
+    border: none;
+}
+
+.settings_tab .mid .change_pass_form button:hover {
+    transition: 0.3s;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------Forget-Password------------------------------- */
+
+.settings_tab .mid.forget_pass {
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+.settings_tab .mid .forgot_pass_form {
+    padding: 1em;
+    background: var(--bg2);
+    border-radius: 0.5em;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.settings_tab .mid .forgot_pass_form.forgot2 {
+    display: none;
+}
+
+.settings_tab .mid .forgot_pass_form p {
+    font-family: var(--heading);
+    font-size: 4.5vw;
+    /* font-weight: 600; */
+    color: var(--text2);
+    margin-bottom: 0.5em;
+}
+
+.settings_tab .mid .forgot_pass_form input {
+    font-family: var(--text);
+    font-size: 4vw;
+    background: var(--bg);
+    border: none;
+    outline: none;
+    color: var(--text2);
+    border-radius: 0.3em;
+    padding: 0.5em 0.7em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.settings_tab .mid .forgot_pass_form button {
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    color: var(--text1);
+    font-weight: 900;
+    background: var(--accent);
+    font-family: var(--text);
+    font-size: 3.8vw;
+    display: block;
+    float: right;
+    margin-top: 3em;
+    border: none;
+}
+
+.settings_tab .mid .forgot_pass_form button:hover {
+    transition: 0.3s;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+.settings_tab .mid .forgot_pass_form h6 {
+    color: var(--danger);
+    font-size: 3.5vw;
+    font-family: var(--text);
+    text-align: right;
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------Reset-Password------------------------------- */
+
+.settings_tab .mid.reset_pass {
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+.settings_tab .mid .reset_pass_form {
+    padding: 1em;
+    background: var(--bg2);
+    border-radius: 0.5em;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.settings_tab .mid .reset_pass_form p {
+    font-family: var(--heading);
+    font-size: 4.5vw;
+    /* font-weight: 600; */
+    color: var(--text2);
+    margin-bottom: 0.5em;
+}
+
+.settings_tab .mid .reset_pass_form input {
+    font-family: var(--text);
+    font-size: 4vw;
+    background: var(--bg);
+    border: none;
+    outline: none;
+    color: var(--text2);
+    border-radius: 0.3em;
+    padding: 0.5em 0.7em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.settings_tab .mid .reset_pass_form button {
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    color: var(--text1);
+    font-weight: 900;
+    background: var(--accent);
+    font-family: var(--text);
+    font-size: 3.8vw;
+    display: block;
+    float: right;
+    margin-top: 3em;
+    border: none;
+}
+
+.settings_tab .mid .reset_pass_form button:hover {
+    transition: 0.3s;
+    background: var(--danger);
+    color: var(--bg);
+}
+
+
+/* -------------------------------notifications-settings------------------------------- */
+
+.settings_tab .mid.notifications {
+    width: 100%;
+    height: 75%;
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------invite-settings------------------------------- */
+
+.settings_tab .mid.invite {
+    width: 100%;
+    height: 75%;
+}
+
+.settings_tab .bottom {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* -------------------------------help-settings------------------------------- */
+
+.settings_tab .mid.help {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.settings_tab .mid.help form p {
+    font-family: var(--heading);
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    color: var(--text2);
+}
+
+.settings_tab .mid.help form input,
+select,
+textarea {
+    margin-bottom: 1.5em;
+    font-family: var(--text);
+    color: var(--text2);
+    padding: 0.3em 0.6em;
+    font-size: 4.5vw;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    background: var(--bg2);
+    width: 100%;
+}
+
+.settings_tab .mid.help form textarea {
+    height: 150px;
+}
+
+.settings_tab .mid.help form button {
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    color: var(--bg);
+    background: var(--success);
+    font-family: var(--text);
+    font-size: 5vw;
+    cursor: pointer;
+    float: right;
+}
+
+.settings_tab .mid.help form button:hover {
+    transition: 0.3s;
+    background: var(--danger);
+}
+
+.settings_tab .bottom.help {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    padding: 0px 5%;
+    align-items: center;
+    font-family: var(--heading);
+    color: var(--danger);
+    font-size: 5vw;
+}
+
+
+/* --------------media queries--------------- */
+
+@media(max-width:1025px) {
+    .settings_tab .swiftcom {
+        width: 40%;
+    }
+    .settings_tab .main_tab {
+        width: 60%;
+    }
+}
+
+@media(min-width:550px) {
+    /* top */
+    .settings_tab .left {
+        font-size: 25px;
+    }
+    .settings_tab .top .left .fa-ellipsis-v {
+        font-size: 25px;
+    }
+    .settings_tab .top .right .search .fa-search {
+        font-size: 25px;
+    }
+    .settings_tab .top .right .search input {
+        font-size: 20px;
+    }
+    /* middle */
+    .settings_tab .mid .contact .left img {
+        height: 60px;
+        width: 60px;
+    }
+    .settings_tab .mid .contact .right h1 {
+        font-size: 25px;
+    }
+    .settings_tab .mid .contact .right h2 {
+        font-size: 10px;
+    }
+    /* bottom */
+    .settings_tab .bottom img {
+        width: 30px;
+    }
+}
+
+@media(max-width:550px) {
+    .settings_tab .swiftcom {
+        display: none;
+    }
+    .settings_tab .main_tab {
+        width: 100%;
+    }
+}

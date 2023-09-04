@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Sniglet&family=Yanone+Kaffeesatz&display=swap');
+:root {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #fff;
+    --bg2: rgb(238, 238, 238);
+    --accent: rgb(96, 138, 255);
+    --text1: #fff;
+    --text2: #333;
+    --text3: rgb(200, 200, 200);
+    --danger: crimson;
+    --success: #17b978;
+    --chatit: linear-gradient(to bottom, rgb(40, 94, 255), rgb(52, 106, 255));
+    --chatme: linear-gradient(to bottom, rgb(243, 243, 243), rgb(230, 230, 230));
+    --shadow: rgba(136, 136, 136, 0.5);
+    --shadow2: rgba(51, 51, 51, 0.11);
+    --icons: contrast(60%);
+}
+
+:root#cataclysm {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #1a2639;
+    --bg2: #3e4a61;
+    --accent: #c24d2c;
+    --text1: #fafafa;
+    --text2: #d9dad7;
+    --text3: rgb(200, 200, 200);
+    --danger: #ed733f;
+    --success: #17b978;
+    --chatit: linear-gradient(to bottom, #c24d2c, #c75435);
+    --chatme: linear-gradient(to bottom, #3e4a61, #3b4455);
+    --shadow: rgba(136, 136, 136, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.11);
+    --icons: contrast(0%);
+}
+
+:root#fuchsia {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #343643;
+    --bg2: #4d4f5b;
+    --accent: linear-gradient(to right, #4da8f2, #a674ed);
+    --text1: #ececec;
+    --text2: #e0e0e0;
+    --text3: #8a8a8a;
+    --danger: #fd639e;
+    --success: #67e192;
+    --chatit: linear-gradient(to right, #fd639e, #eb8d41);
+    --chatme: linear-gradient(130deg, #346846, #526839);
+    --shadow: rgba(255, 255, 255, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.11);
+    --icons: contrast(100%) invert(1) saturate(0);
+}
+
+:root#pink {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #fffbf3;
+    --bg2: #ffd7e9;
+    --accent: #eb89b5;
+    --text1: rgb(255, 255, 255);
+    --text2: #333;
+    --text3: #4d3a4d;
+    --danger: #bf5caa;
+    --success: #17b978;
+    --chatme: linear-gradient(to bottom, #fff8d2, #faf1bd);
+    --chatit: linear-gradient(to bottom, #eb89b5, #e08ab1);
+    --shadow: rgba(136, 136, 136, 0.5);
+    --shadow2: rgba(51, 51, 51, 0.11);
+    --icons: contrast(60%);
+}
+
+:root#candyCane {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #f5f4ed;
+    --bg2: #fff;
+    --accent: #d72323;
+    --text1: #f5eded;
+    --text2: #000000;
+    --text3: #5e5e5e;
+    --danger: crimson;
+    --success: #059600;
+    --chatit: linear-gradient(to bottom, #e21d1d, #ce2020);
+    --chatme: linear-gradient(to bottom, #dadada, #e6e6e6);
+    --shadow: rgba(136, 136, 136, 0.5);
+    --shadow2: rgba(51, 51, 51, 0.11);
+    --icons: contrast(60%);
+}
+
+:root#vampire {
+    --text: 'Quicksand', sans-serif;
+    --heading: 'Poppins', sans-serif;
+    --bold: 'Sniglet', cursive;
+    --narrow: 'Yanone Kaffeesatz', sans-serif;
+    /* colors */
+    --bg: #0f1216;
+    --bg2: #222730;
+    --accent: #ac2222;
+    --text1: #fafafa;
+    --text2: #d9dad7;
+    --text3: rgb(120, 120, 120);
+    --danger: #ce1f1f;
+    --success: #079c27;
+    --chatit: linear-gradient(to bottom, #e21d1d, #ce2020);
+    --chatme: linear-gradient(to bottom, #586170, #646972);
+    --shadow: rgba(136, 136, 136, 0.5);
+    --shadow2: rgba(255, 255, 255, 0.11);
+    --icons: contrast(0%);
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none
+}
+
+body {
+    background: white;
+}
+
+.jnj {
+    position: absolute;
+    border-radius: 50%;
+    height: 0vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--lightblue);
+    z-index: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #fff;
+        --bg2: rgb(238, 238, 238);
+        --accent: rgb(96, 138, 255);
+        --text1: #fff;
+        --text2: #333;
+        --text3: rgb(200, 200, 200);
+        --danger: crimson;
+        --success: #17b978;
+        --chatit: linear-gradient(to bottom, rgb(40, 94, 255), rgb(52, 106, 255));
+        --chatme: linear-gradient(to bottom, rgb(243, 243, 243), rgb(230, 230, 230));
+        --shadow: rgba(136, 136, 136, 0.5);
+        --shadow2: rgba(51, 51, 51, 0.11);
+        --icons: contrast(60%);
+    }
+     :root#cataclysm {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #1a2639;
+        --bg2: #3e4a61;
+        --accent: #c24d2c;
+        --text1: #fafafa;
+        --text2: #d9dad7;
+        --text3: rgb(200, 200, 200);
+        --danger: #ed733f;
+        --success: #17b978;
+        --chatit: linear-gradient(to bottom, #c24d2c, #c75435);
+        --chatme: linear-gradient(to bottom, #3e4a61, #3b4455);
+        --shadow: rgba(136, 136, 136, 0.5);
+        --shadow2: rgba(255, 255, 255, 0.11);
+        --icons: contrast(0%);
+    }
+     :root#fuchsia {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #343643;
+        --bg2: #4d4f5b;
+        --accent: linear-gradient(to right, #4da8f2, #a674ed);
+        --text1: #ececec;
+        --text2: #e0e0e0;
+        --text3: #8a8a8a;
+        --danger: #fd639e;
+        --success: #67e192;
+        --chatit: linear-gradient(to right, #fd639e, #eb8d41);
+        --chatme: linear-gradient(130deg, #346846, #526839);
+        --shadow: rgba(255, 255, 255, 0.5);
+        --shadow2: rgba(255, 255, 255, 0.11);
+        --icons: contrast(100%) invert(1) saturate(0);
+    }
+     :root#pink {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #fffbf3;
+        --bg2: #ffd7e9;
+        --accent: #eb89b5;
+        --text1: rgb(255, 255, 255);
+        --text2: #333;
+        --text3: #4d3a4d;
+        --danger: #bf5caa;
+        --success: #17b978;
+        --chatme: linear-gradient(to bottom, #fff8d2, #faf1bd);
+        --chatit: linear-gradient(to bottom, #eb89b5, #e08ab1);
+        --shadow: rgba(136, 136, 136, 0.5);
+        --shadow2: rgba(51, 51, 51, 0.11);
+        --icons: contrast(60%);
+    }
+     :root#candyCane {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #f5f4ed;
+        --bg2: #fff;
+        --accent: #d72323;
+        --text1: #f5eded;
+        --text2: #000000;
+        --text3: #5e5e5e;
+        --danger: crimson;
+        --success: #059600;
+        --chatit: linear-gradient(to bottom, #e21d1d, #ce2020);
+        --chatme: linear-gradient(to bottom, #dadada, #e6e6e6);
+        --shadow: rgba(136, 136, 136, 0.5);
+        --shadow2: rgba(51, 51, 51, 0.11);
+        --icons: contrast(60%);
+    }
+     :root#vampire {
+        --text: 'Quicksand', sans-serif;
+        --heading: 'Poppins', sans-serif;
+        --bold: 'Sniglet', cursive;
+        --narrow: 'Yanone Kaffeesatz', sans-serif;
+        /* colors */
+        --bg: #0f1216;
+        --bg2: #222730;
+        --accent: #ac2222;
+        --text1: #fafafa;
+        --text2: #d9dad7;
+        --text3: rgb(120, 120, 120);
+        --danger: #ce1f1f;
+        --success: #079c27;
+        --chatit: linear-gradient(to bottom, #e21d1d, #ce2020);
+        --chatme: linear-gradient(to bottom, #586170, #646972);
+        --shadow: rgba(136, 136, 136, 0.5);
+        --shadow2: rgba(255, 255, 255, 0.11);
+        --icons: contrast(0%);
+    }
+}

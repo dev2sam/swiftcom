@@ -1,0 +1,367 @@
+.myprofile {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.myprofile .main_tab {
+    height: 100%;
+    width: 50%;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.myprofile .main {
+    width: 100%;
+    height: 90%;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* swiftcom */
+
+.myprofile .swiftcom {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+    overflow: hidden;
+    position: relative;
+}
+
+.myprofile .swiftcom .innercom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.myprofile .swiftcom .innercom .logo svg {
+    border-radius: 50%;
+    width: 13vw;
+}
+
+.myprofile .swiftcom .innercom h1 {
+    font-family: var(--heading);
+    text-align: center;
+    margin-top: 0.2em;
+    color: var(--bg);
+    font-size: 3vw;
+}
+
+
+/* -----------top----------- */
+
+.myprofile .top {
+    width: 100%;
+    height: 15%;
+    background: var(--accent);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: var(--heading);
+    font-size: 6vw;
+    color: var(--text1);
+    padding: 0em 1em;
+}
+
+.myprofile .top h1 {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fa-chevron-left {
+    font-size: 6vw;
+    margin-right: 1em;
+}
+
+
+/* -----------mid----------- */
+
+.myprofile .mid {
+    width: 100%;
+    height: 30%;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+}
+
+.myprofile .mid .clip {
+    width: 100%;
+    height: 100%;
+    clip-path: ellipse(85% 60% at 50% 25%);
+    background: var(--accent);
+}
+
+.myprofile .mid .profilepic {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    height: 26vw;
+    width: 26vw;
+    object-fit: cover;
+    object-position: center;
+    padding: 0.3em;
+    background: var(--bg);
+    border: 3px solid var(--success);
+}
+
+
+/* -----------bottom----------- */
+
+.myprofile .bottom {
+    width: 100%;
+    height: 55%;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0em 1em;
+}
+
+.myprofile .bottom div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.myprofile .bottom div h1 {
+    font-family: var(--text);
+    font-size: 3vw;
+    color: var(--text3);
+}
+
+.myprofile .bottom div h2 {
+    font-family: var(--heading);
+    font-size: 5vw;
+    font-weight: 900;
+    color: var(--text2);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blocked_btn {
+    border: none;
+    outline: none;
+    padding: 0.3em 0.6em;
+    font-size: 3.4vw;
+    font-family: var(--bold);
+    color: var(--bg);
+    background: var(--danger);
+    border-radius: 0.3em;
+}
+
+
+/* -------blocked_list------ */
+
+.blocked_list {
+    width: 100%;
+    height: 55%;
+    background: var(--bg);
+    overflow-y: scroll;
+    padding: 1em;
+    padding-top: 2em;
+    position: relative;
+}
+
+.blocked_list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.blocked_list .cross_btn {
+    position: absolute;
+    left: 1em;
+    top: 0;
+    display: block;
+    color: var(--danger);
+    font-size: 7vw;
+}
+
+.blocked_list .blocked_contact {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 0.3em;
+    padding: 0.5em 1em;
+    border-radius: 0.8em;
+    background: var(--bg2);
+}
+
+.blocked_list .blocked_contact .left {
+    height: 100%;
+    width: 23%;
+    overflow: hidden;
+    position: relative;
+}
+
+.blocked_list .blocked_contact .left img {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    padding: 0.1em;
+}
+
+.blocked_list .blocked_contact .right {
+    height: 100%;
+    width: 77%;
+    overflow: hidden;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blocked_list .blocked_contact .right .info {
+    height: 100%;
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blocked_list .blocked_contact .right .info .inner-info {
+    width: 100%;
+    overflow: hidden;
+    padding-right: 1em;
+}
+
+.blocked_list .blocked_contact .right h1 {
+    font-family: var(--text);
+    font-size: 5.8vw;
+    color: var(--text2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.blocked_list .blocked_contact .right h2 {
+    font-family: var(--heading);
+    font-size: 2.6vw;
+    color: var(--text3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.blocked_list .blocked_contact .right .info button {
+    float: right;
+    white-space: nowrap;
+    border: none;
+    outline: none;
+    color: var(--bg);
+    font-family: var(--heading);
+    font-size: 4vw;
+    padding: 0.3em 0.6em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    background: var(--danger);
+}
+
+
+/* ---------vbottom-------- */
+
+.myprofile .very_bottom {
+    width: 100%;
+    height: 10%;
+    padding: 0em 3em;
+    background: var(--bg);
+    font-family: var(--text);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    border-top: 2px solid var(--shadow2);
+}
+
+.myprofile .very_bottom div {
+    padding: 0.5em;
+    position: relative;
+}
+
+.myprofile .very_bottom div.onthis::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 4px;
+    border-radius: 100em;
+    width: 90%;
+    background: var(--accent);
+}
+
+.myprofile .very_bottom img {
+    width: 8vw;
+    filter: var(--icons);
+    cursor: pointer;
+}
+
+
+/* --------------media queries--------------- */
+
+@media(max-width:1025px) {
+    .myprofile .swiftcom {
+        width: 40%;
+    }
+    .myprofile .main_tab {
+        width: 60%;
+    }
+}
+
+@media(min-width:550px) {
+    /* top */
+    .myprofile .top {
+        font-size: 20px;
+    }
+    /* middle */
+    .myprofile .mid .profilepic {
+        height: 150px;
+        width: 150px;
+    }
+    /* bottom */
+    .myprofile .bottom div h1 {
+        font-size: 15px;
+    }
+    .myprofile .bottom div h2 {
+        font-size: 20px;
+    }
+    /* very bottom */
+    .myprofile .very_bottom img {
+        width: 30px;
+    }
+}
+
+@media(max-width:550px) {
+    .myprofile .swiftcom {
+        display: none;
+    }
+    .myprofile .main_tab {
+        width: 100%;
+    }
+}

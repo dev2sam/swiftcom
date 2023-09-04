@@ -1,0 +1,236 @@
+.settings {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.settings .main_tab {
+    height: 100%;
+    width: 50%;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+}
+
+.settings .main {
+    width: 100%;
+    height: 90%;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* swiftcom */
+
+.settings .swiftcom {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+    overflow: hidden;
+    position: relative;
+}
+
+.settings .swiftcom .innercom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings .swiftcom .innercom .logo svg {
+    border-radius: 50%;
+    width: 13vw;
+}
+
+.settings .swiftcom .innercom h1 {
+    font-family: var(--heading);
+    text-align: center;
+    margin-top: 0.2em;
+    color: var(--text1);
+    font-size: 3vw;
+}
+
+
+/* -----------top----------- */
+
+.settings .top {
+    width: 100%;
+    height: 15%;
+    background: var(--accent);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: var(--heading);
+    font-size: 6vw;
+    color: var(--text1);
+    padding: 0em 1em;
+}
+
+
+/* -----------mid----------- */
+
+.settings .mid {
+    width: 100%;
+    height: 75%;
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.settings .mid div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 12vw;
+}
+
+.settings .mid img {
+    width: 7vw;
+    height: 7vw;
+    margin-right: 1em;
+    filter: var(--icons);
+}
+
+.settings .mid h1 {
+    font-family: var(--heading);
+    font-size: 5vw;
+    color: var(--text2);
+}
+
+
+/* -----------bottom----------- */
+
+.settings .bottom {
+    width: 100%;
+    height: 10%;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.settings .bottom .logo {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.settings .bottom .logo img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.settings .bottom .logo h1 {
+    font-family: var(--heading);
+    font-size: 7vw;
+    color: var(--text2);
+}
+
+
+/* ---------very-bottom-------- */
+
+.settings .very_bottom {
+    width: 100%;
+    height: 10%;
+    padding: 0em 3em;
+    background: var(--bg);
+    font-family: var(--text);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    border-top: 2px solid var(--shadow2);
+}
+
+.settings .very_bottom div {
+    padding: 0.5em;
+    position: relative;
+}
+
+.settings .very_bottom div.onthis::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 4px;
+    border-radius: 100em;
+    width: 90%;
+    background: var(--accent);
+}
+
+.settings .very_bottom img {
+    width: 8vw;
+    filter: var(--icons);
+    cursor: pointer;
+}
+
+
+/* --------------media queries--------------- */
+
+@media(max-width:1025px) {
+    .settings .swiftcom {
+        width: 40%;
+    }
+    .settings .main_tab {
+        width: 60%;
+    }
+}
+
+@media(min-width:550px) {
+    /* top */
+    .settings .top {
+        font-size: 25px;
+    }
+    /* middle */
+    .settings .mid div {
+        margin-top: 50px;
+    }
+    .settings .mid img {
+        width: 30px;
+        height: 30px;
+    }
+    .settings .mid h1 {
+        font-size: 18px;
+    }
+    /* bottom */
+    .settings .bottom .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    .settings .bottom .logo h1 {
+        font-size: 25px;
+    }
+    /* very bottom */
+    .settings .very_bottom img {
+        width: 30px;
+    }
+}
+
+@media(max-width:550px) {
+    .settings .swiftcom {
+        display: none;
+    }
+    .settings .main_tab {
+        width: 100%;
+    }
+}

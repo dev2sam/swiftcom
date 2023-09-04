@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        button {
+            margin: 0 3px 10px 0;
+            padding-left: 2px;
+            padding-right: 2px;
+            width: 99px;
+        }
+        
+        button:last-of-type {
+            margin: 0;
+        }
+        
+        p.borderBelow {
+            margin: 0 0 20px 0;
+            padding: 0 0 20px 0;
+        }
+        
+        video {
+            vertical-align: top;
+            --width: 25vw;
+            width: var(--width);
+            height: calc(var(--width) * 0.5625);
+        }
+        
+        video:last-of-type {
+            margin: 0 0 20px 0;
+        }
+        
+        video#gumVideo {
+            margin: 0 20px 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <video id="gum" playsinline autoplay muted></video>
+        <video id="recorded" playsinline loop></video>
+
+        <div>
+            <button id="start">Start camera</button>
+            <button id="record" disabled>Record</button>
+            <button id="play" disabled>Play</button>
+            <button id="download" disabled>Download</button>
+        </div>
+
+        <div>
+            <h4>Media Stream Constraints options</h4>
+            <p>
+                Echo cancellation: <input type="checkbox" id="echoCancellation" />
+            </p>
+        </div>
+
+        <div>
+            <span id="errorMsg"></span>
+        </div>
+    </div>
+
+
+    <script>
+        'use strict';
+
+        /* globals MediaRecorder */
+
+        let mediaRecorder;
+        let recordedBlobs;
+
+        const errorMsgElement = document.querySelector('span#errorMsg');
+        const recordedVideo = document.querySelector('video#recorded');
+        const recordButton = document.querySelector('button#record');
+        const playButton = document.querySelector('button#play');
+        const downloadButton = document.querySelector('button#download');
+
+
+
+
+
+
+        downloadButton.addEventListener('click', () => {
+            const blob = new Blob(recordedBlobs, {
+                type: 'video/mp4'
+            });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'test.mp4';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 100);
+        });
+
+
+
+
+
+
+        // mark----------------------
+        playButton.addEventListener('click', () => {
+            const superBuffer = new Blob(recordedBlobs, {
+                type: 'video/webm'
+            });
+            recordedVideo.src = null;
+            recordedVideo.srcObject = null;
+            recordedVideo.src = window.URL.createObjectURL(superBuffer);
+            recordedVideo.controls = true;
+            recordedVideo.play();
+        });
+
+
+
+        function stopRecording() {
+            mediaRecorder.stop();
+        }
+
+
+
+        function handleDataAvailable(event) {
+            if (event.data && event.data.size > 0) {
+                recordedBlobs.push(event.data);
+            }
+        }
+
+
+        recordButton.addEventListener('click', () => {
+            if (recordButton.textContent === 'Record') {
+                startRecording();
+            } else {
+                stopRecording();
+                recordButton.textContent = 'Record';
+                playButton.disabled = false;
+                downloadButton.disabled = false;
+            }
+        });
+
+
+        function startRecording() {
+
+            recordedBlobs = [];
+
+            let options = {
+                mimeType: 'video/webm;codecs=vp9,opus'
+            };
+
+            try {
+                mediaRecorder = new MediaRecorder(window.stream, options);
+            } catch (e) {
+                errorMsgElement.innerHTML = `Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
+                return;
+            }
+
+            recordButton.textContent = 'Stop Recording';
+            playButton.disabled = true;
+            downloadButton.disabled = true;
+            mediaRecorder.ondataavailable = handleDataAvailable;
+            mediaRecorder.start();
+        }
+
+
+        function handleSuccess(stream) {
+            recordButton.disabled = false;
+            window.stream = stream;
+
+            const gumVideo = document.querySelector('video#gum');
+            gumVideo.srcObject = stream;
+        }
+
+
+        async function init(constraints) {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                handleSuccess(stream);
+            } catch (e) {
+                errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+            }
+        }
+
+
+        document.querySelector('button#start').addEventListener('click', async() => {
+
+            const constraints = {
+                audio: {
+                    echoCancellation: {
+                        exact: true
+                    }
+                },
+                video: {
+                    width: 1280,
+                    height: 720
+                }
+            };
+            await init(constraints);
+        });
+    </script>
+
+</body>
+
+</html>
